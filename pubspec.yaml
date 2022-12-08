@@ -1,4 +1,4 @@
-name: flutter_cardgame
+name: Memory
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  get_storage:
   flutter:
     sdk: flutter
 
@@ -36,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.11.0"
+  change_app_package_name: ^0.1.3
   flutter_test:
     sdk: flutter
 
@@ -50,9 +53,18 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
+
 flutter:
   assets:
     - assets/images/
+    - assets/easy/
+    - assets/medium/
+    - assets/hard/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -89,3 +101,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+fonts:
+  - family: MyFlutterApp # the name of your font family
+    fonts:
+      - asset: assets/MyFlutterApp.ttf # your font file name and the directory
